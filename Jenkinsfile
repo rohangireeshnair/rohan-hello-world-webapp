@@ -16,8 +16,8 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(
-                        credentialsId: '**my-cred**',toolName: 'docker') {
-                        def helloWorldBuild = docker.build("rohangireeshnair/hello-world-app:latest");
+                        credentialsId: '81766dd3-f63a-44ba-803c-852e7085541e',toolName: 'docker') {
+                        def helloWorldBuild = docker.build("rohangnair/hello-world-app:latest");
                         credentialsId.push();
                     }
                 }
