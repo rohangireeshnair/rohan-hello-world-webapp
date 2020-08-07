@@ -27,7 +27,7 @@ pipeline {
     post {
         success {
             echo "Success"
-	    sh "curl -X POST <Incoming Webhook URL> -H 'Content-Type: application/json' -d '{"text": "Image Build Succeeded"}'"
+	    sh "curl -X POST https://api.flock.com/hooks/sendMessage/a63bec9c-5ef0-4be7-8d65-e195491f6058 -H 'Content-Type: application/json' -d '{"text": "Image Build Succeeded"}'"
         }
         failure {
             echo "Failed"
